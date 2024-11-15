@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import headerimg from "../assets/headerimg.jpg";
 import bg2 from "../assets/headerimg.jpg";
+import data from "../data.json";
 
 const Home = () => {
   return (
@@ -15,11 +16,10 @@ const Home = () => {
       >
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 sm:items-start sm:py-20 sm:pl-14 sm:pr-10">
           <h1 className="mr-2 px-3 pb-2 text-center text-6xl font-bold text-white sm:text-left">
-            Your Club Name
+            {data.name}
           </h1>
           <h3 className="mb-4 pr-2 text-center text-2xl text-white sm:text-left">
-            A short bio about your<span className="italic"> specific club</span>
-            .
+            {data.description}
           </h3>
           <motion.div
             whileHover={{
@@ -56,27 +56,25 @@ const Home = () => {
           <h3 className="mt-8 px-4 text-center text-3xl font-bold text-white underline underline-offset-2">
             Our leadership team:
           </h3>
-          <ul className="">
-            <li className="mt-4 px-4 text-center text-lg font-bold text-white">
-              {" "}
-              President: Name of President
-            </li>
-            <li className="mt-4 px-4 text-center text-lg font-bold text-white">
-              {" "}
-              Vice President: Name of Vice President
-            </li>
-            <li className="mt-4 px-4 text-center text-lg font-bold text-white">
-              {" "}
-              Secretary: Name of Secretary
-            </li>
-            <li className="mt-4 px-4 text-center text-lg font-bold text-white">
-              {" "}
-              Treasurer: Name of Treasurer
-            </li>
-            <li className="mt-4 px-4 text-center text-lg font-bold text-white">
-              {" "}
-              Add or remove as many as you'd like
-            </li>
+          <ul>
+            {Object.keys(data.leadership).map((role) => (
+              <>
+                {Array.isArray(data.leadership[role]) ? (
+                  data.leadership[role].map((name, i) => (
+                    <li
+                      className="mt-4 px-4 text-center text-lg font-bold text-white"
+                      key={i}
+                    >
+                      {role}: {name}
+                    </li>
+                  ))
+                ) : (
+                  <li className="mt-4 px-4 text-center text-lg font-bold text-white">
+                    {role}: {data.leadership[role]}
+                  </li>
+                )}
+              </>
+            ))}
           </ul>
           <motion.div
             whileHover={{

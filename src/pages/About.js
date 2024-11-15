@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import headerimg from "../assets/headerimg.jpg";
+import data from "../data.json";
 
 const About = () => {
   const [expanded, setExpanded] = useState(null);
@@ -81,30 +82,34 @@ const About = () => {
           Our Leadership Team:
         </h2>
         <div className="mb-8 flex flex-col items-center space-y-4">
-          <p className="text-lg font-bold">President: Name of President</p>
-          <p className="text-lg font-bold">
-            Vice President: Name of Vice President
-          </p>
-          <p className="text-lg font-bold">Secretary: Name of Secretary</p>
-          <p className="text-lg font-bold">Treasurer: Name of Treasurer</p>
-          <p className="text-lg font-bold">
-            Add or remove as many as you'd like
-          </p>
+          {Object.keys(data.leadership).map((role) => (
+            <>
+              {Array.isArray(data.leadership[role]) ? (
+                data.leadership[role].map((name, i) => (
+                  <p className="text-lg font-bold" key={i}>
+                    {role}: {name}
+                  </p>
+                ))
+              ) : (
+                <p className="text-lg font-bold">
+                  {role}: {data.leadership[role]}
+                </p>
+              )}
+            </>
+          ))}
         </div>
         <div className="mb-4 flex flex-col items-center space-y-4">
           <h2 className="text-2xl font-bold underline underline-offset-2">
             What we do:
           </h2>
-          <p className="text-lg">
-            At our club, we do _______________________________.
-          </p>
+          <p className="text-lg">{data.description}</p>
         </div>
         <div className="mb-4 flex flex-col items-center space-y-4">
           <h2 className="text-2xl font-bold underline underline-offset-2">
             When we meet:
           </h2>
           <p className="text-lg">
-            We meet every _______________________________.
+            We meet every {data.time} in {data.location}
           </p>
         </div>
       </div>

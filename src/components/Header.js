@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.png";
+import data from "../data.json";
 
 const Header = () => {
   const location = useLocation();
@@ -16,7 +17,7 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between px-3 py-3">
         <Link to="/" className="flex items-center">
           <img src={logo} alt="Logo" className="mr-2 h-12 w-12 rounded-md" />
-          <span className="text-2xl font-bold drop-shadow-md">Club Name</span>
+          <span className="text-2xl font-bold drop-shadow-md">{data.name}</span>
         </Link>
         <nav className="hidden space-x-4 md:flex">
           <Link

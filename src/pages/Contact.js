@@ -3,6 +3,7 @@ import { FaEnvelope, FaCalendarAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import headerimg from "../assets/headerimg.jpg";
 import { FaShareNodes } from "react-icons/fa6";
+import data from "../data.json";
 
 const Contact = () => {
   const images = [headerimg];
@@ -105,9 +106,26 @@ const Contact = () => {
         </div>
         <div className="mb-0 flex flex-col items-center space-y-4">
           <h2 className="text-2xl font-bold underline underline-offset-2">
-            xtra
+            Extra
           </h2>
-          <p className="text-lg">Any other relevant contact info?</p>
+          <a
+            href={data.instagram}
+            className="text-lg underline hover:text-gray-500"
+          >
+            Instagram
+          </a>
+          <a
+            href={data.discord}
+            className="text-lg underline hover:text-gray-500"
+          >
+            Discord
+          </a>
+          <a
+            href={data.linktree}
+            className="text-lg underline hover:text-gray-500"
+          >
+            LinkTree
+          </a>
         </div>
       </div>
     </div>
