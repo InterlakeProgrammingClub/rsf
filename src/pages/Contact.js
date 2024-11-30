@@ -36,7 +36,7 @@ const Contact = () => {
         transition={{ duration: 1 }}
       >
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-center">
-          <h1 className="mb-4 mt-12 text-4xl font-bold text-white">
+          <h1 className="mb-4 mt-12 text-4xl font-bold text-[#a562db]">
             Contact Us
           </h1>
           <motion.div
@@ -51,7 +51,7 @@ const Contact = () => {
           >
             <a
               href="mailto:club@gmail.com"
-              className="rounded bg-[#0C2340] px-4 py-2 font-bold text-white"
+              className="rounded bg-[#0d0a1f] px-4 py-2 font-bold text-[#a562db]"
             >
               <span>email or action button</span>
             </a>
@@ -68,13 +68,13 @@ const Contact = () => {
             whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
           >
             <FaShareNodes
-              className="text-[#0C2340]"
+              className="text-[#0d0a1f]"
               style={{ verticalAlign: "middle" }}
             />
             <a
               href="#"
               onClick={handleShare}
-              className="flex items-center space-x-2 rounded bg-[#0C2340] px-4 py-2 font-bold text-white"
+              className="flex items-center space-x-2 rounded bg-[#0d0a1f] px-4 py-2 font-bold text-[#a562db]"
               style={{ perspective: "500px" }}
             >
               Share our Website
@@ -82,7 +82,7 @@ const Contact = () => {
           </motion.div>
           <div className="flex items-center space-x-2">
             <FaCalendarAlt
-              className="text-[#0C2340]"
+              className="text-[#0d0a1f]"
               style={{ verticalAlign: "middle" }}
             />
             <p className="text-lg font-bold">Meeting info goes here</p>
@@ -92,12 +92,12 @@ const Contact = () => {
             whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
           >
             <FaEnvelope
-              className="text-[#0C2340]"
+              className="text-[#0d0a1f]"
               style={{ verticalAlign: "middle" }}
             />
             <a
               href="mailto:club@gmail.com"
-              className="flex items-center space-x-2 rounded bg-[#0C2340] px-4 py-2 font-bold text-white"
+              className="flex items-center space-x-2 rounded bg-[#0d0a1f] px-4 py-2 font-bold text-[#a562db]"
               style={{ perspective: "500px" }}
             >
               email

@@ -60,7 +60,7 @@ const About = () => {
         transition={{ duration: 1, ease: "easeInOut" }}
       >
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-center">
-          <h1 className="mb-4 mt-12 text-4xl font-bold text-white">About Us</h1>
+          <h1 className="mb-4 mt-12 text-4xl font-bold text-[#a562db]">About Us</h1>
           <motion.div
             whileHover={{
               scale: 1.05,
@@ -70,7 +70,7 @@ const About = () => {
           >
             <a
               href="mailto:club@gmail.com"
-              className="rounded bg-[#0C2340] px-4 py-2 font-bold text-white"
+              className="rounded bg-[#0d0a1f] px-4 py-2 font-bold text-[#a562db]"
             >
               <span>Email or action button</span>
             </a>
@@ -113,7 +113,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="mx-auto max-w-4xl px-4 pb-10 pt-4 text-white">
+      <div className="mx-auto max-w-4xl px-4 pb-10 pt-4 text-[#a562db]">
         <div className="grid grid-cols-1 gap-8 pt-4 md:grid-cols-2">
           {meetings.map((meeting, index) => (
             <MeetingOption
@@ -148,7 +148,7 @@ const MeetingOption = ({
   return (
     <div ref={inViewRef} className="w-full">
       <motion.div
-        className="flex h-40 w-full cursor-pointer flex-col items-center justify-center rounded-md bg-white bg-opacity-25 p-4 text-center transition duration-300 hover:bg-opacity-50"
+        className="flex h-40 w-full cursor-pointer flex-col items-center justify-center rounded-md bg-[#a562db] bg-opacity-25 p-4 text-center transition duration-300 hover:bg-opacity-50"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${image})`,
           backgroundSize: "cover",
@@ -167,7 +167,7 @@ const MeetingOption = ({
         <h2 className="mb-2 text-3xl font-semibold">{date}</h2>
       </motion.div>
       {expanded === index && (
-        <div className="mt-2 rounded-md bg-white p-4 text-black">{details}</div>
+        <div className="mt-2 rounded-md bg-[#a562db] p-4 text-black">{details}</div>
       )}
     </div>
   );

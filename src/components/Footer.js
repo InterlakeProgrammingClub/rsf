@@ -4,7 +4,7 @@ import data from "../data.json";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0C2340] py-4 text-white">
+    <footer className="bg-[#0d0a1f] py-4 text-[#a562db]">
       <div className="container mx-auto flex items-center justify-between px-4">
         <div>
           {/* Keep the website made by part */}

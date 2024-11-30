@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 bg-[#0C2340] text-white">
+    <header className="fixed left-0 right-0 top-0 z-50 bg-[#0d0a1f] text-[#a562db]">
       <div className="container mx-auto flex items-center justify-between px-3 py-3">
         <Link to="/" className="flex items-center">
           <img src={logo} alt="Logo" className="mr-2 h-12 w-12 rounded-md" />
@@ -50,10 +50,10 @@ const Header = () => {
         <div className="fixed inset-0 z-50 bg-black bg-opacity-75 md:hidden">
           <div className="absolute right-0 top-0 p-4">
             <button onClick={toggleDrawer}>
-              <FaTimes className="text-white" />
+              <FaTimes className="text-[#a562db]" />
             </button>
           </div>
-          <div className="flex h-full flex-col items-center justify-center space-y-4 text-white">
+          <div className="flex h-full flex-col items-center justify-center space-y-4 text-[#a562db]">
             <Link
               to="/"
               onClick={toggleDrawer}
