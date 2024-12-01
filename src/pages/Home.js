@@ -24,7 +24,7 @@ const Home = () => {
             className="mr-2 sm:mt-20 mt-8 h-40 w-40 rounded-md sm:hidden"
           />
           <h1
-            className="mr-2 px-3 pb-2 pt-4 text-center text-4xl sm:text-5xl md:text-6xl font-bold sm:text-left w-full sm:max-w-lg"
+            className="mr-2 px-3 pb-2 pt-4 text-center text-5xl font-bold sm:text-left"
             style={{
               background: "linear-gradient(to right, #6e92d9, #a562db)",
               WebkitBackgroundClip: "text",
@@ -52,7 +52,7 @@ const Home = () => {
               boxShadow: "0px 20px 30px rgba(0, 0, 0, 0.4)",
               transition: { duration: 0.2 },
             }}
-            className="mb-4 inline-flex text-center sm:text-left"
+            className="mb-4 inline-flex pb-8 text-center sm:text-left"
           >
             <a
               href=""

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaDiscord } from "react-icons/fa";
 import bgimg from "../assets/img4.png";
 import officer1 from "../assets/officer1.jpg";
 import officer2 from "../assets/officer2.jpg";
@@ -55,7 +56,7 @@ const About = () => {
   };
 
   return (
-    <div className="text-center bg-[#a562db]">
+    <div className="bg-[#a562db] text-center">
       <motion.div
         className="relative h-96 bg-cover bg-center"
         style={{ backgroundImage: `url(${bgimg})` }}
@@ -133,6 +134,22 @@ const About = () => {
             Past Meetings:
           </h2>
           <p className="text-lg">Past Meetings Available in Discord!</p>
+          <motion.div
+            className="flex items-center space-x-2"
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+          >
+            <FaDiscord
+              className="text-[#0d0a1f]"
+              style={{ verticalAlign: "middle" }}
+            />
+            <a
+              href={data.discord}
+              className="flex items-center space-x-2 rounded bg-[#0d0a1f] px-4 py-2 font-bold text-[#a562db]"
+              style={{ perspective: "500px" }}
+            >
+              Discord
+            </a>
+          </motion.div>
         </div>
 
         <div className="carousel-container">

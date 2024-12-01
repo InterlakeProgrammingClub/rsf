@@ -1,21 +1,19 @@
 import React from "react";
-import { FaEnvelope, FaCalendarAlt } from "react-icons/fa";
+import { FaEnvelope, FaCalendarAlt, FaInstagram, FaDiscord } from "react-icons/fa";
 import { motion } from "framer-motion";
-import headerimg from "../assets/headerimg.jpg";
+import bgimg from "../assets/img1.png";
 import { FaShareNodes } from "react-icons/fa6";
 import data from "../data.json";
+import { SiLinktree } from "react-icons/si";
 
 const Contact = () => {
-  const images = [headerimg];
-  const bgNum = Math.floor(Math.random() * 1);
-  const bgImage = images[bgNum];
 
   const handleShare = async () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "Club Website",
-          text: "Come to our meetings!",
+          title: "Interlake RSF",
+          text: "Come to Interlake RSF!",
           url: window.location.href
         });
       } catch (error) {
@@ -27,16 +25,23 @@ const Contact = () => {
   };
 
   return (
-    <div className="text-center">
+    <div className="text-center ">
       <motion.div
         className="relative h-96 bg-cover bg-center"
-        style={{ backgroundImage: `url(${bgImage})` }}
+        style={{ backgroundImage: `url(${bgimg})` }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-center">
-          <h1 className="mb-4 mt-12 text-4xl font-bold text-[#a562db]">
+          <h1
+            className="mb-4 mt-12 text-4xl font-bold text-[#a562db]"
+            style={{
+              background: "linear-gradient(to right, #6e92d9, #a562db)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent"
+            }}
+          >
             Contact Us
           </h1>
           <motion.div
@@ -50,10 +55,13 @@ const Contact = () => {
             className="mb-4 inline-block"
           >
             <a
-              href="mailto:club@gmail.com"
-              className="rounded bg-[#0d0a1f] px-4 py-2 font-bold text-[#a562db]"
+              href="https://linktr.ee/interlakeRSF"
+              className="flex items-center space-x-1 rounded bg-[#0d0a1f] px-4 py-2 text-md font-bold text-[#a562db]"
             >
-              <span>email or action button</span>
+              <span className="flex items-center justify-between">
+                View our Linktree
+              </span>
+              <SiLinktree />
             </a>
           </motion.div>
         </div>
@@ -81,11 +89,7 @@ const Contact = () => {
             </a>
           </motion.div>
           <div className="flex items-center space-x-2">
-            <FaCalendarAlt
-              className="text-[#0d0a1f]"
-              style={{ verticalAlign: "middle" }}
-            />
-            <p className="text-lg font-bold">Meeting info goes here</p>
+            <p className="text-lg font-bold">We meet at {data.location} from {data.time}</p>
           </div>
           <motion.div
             className="flex items-center space-x-2"
@@ -96,36 +100,66 @@ const Contact = () => {
               style={{ verticalAlign: "middle" }}
             />
             <a
-              href="mailto:club@gmail.com"
+              href={`mailto:${data.email}`}
               className="flex items-center space-x-2 rounded bg-[#0d0a1f] px-4 py-2 font-bold text-[#a562db]"
               style={{ perspective: "500px" }}
             >
-              email
+              Email Us for Questions
             </a>
           </motion.div>
         </div>
         <div className="mb-0 flex flex-col items-center space-y-4">
           <h2 className="text-2xl font-bold underline underline-offset-2">
-            Extra
+            Extra Links
           </h2>
-          <a
-            href={data.instagram}
-            className="text-lg underline hover:text-gray-500"
+          <motion.div
+            className="flex items-center space-x-2"
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
           >
-            Instagram
-          </a>
-          <a
-            href={data.discord}
-            className="text-lg underline hover:text-gray-500"
+            <FaInstagram
+              className="text-[#0d0a1f]"
+              style={{ verticalAlign: "middle" }}
+            />
+            <a
+              href={data.instagram}
+              className="flex items-center space-x-2 rounded bg-[#0d0a1f] px-4 py-2 font-bold text-[#a562db]"
+              style={{ perspective: "500px" }}
+            >
+              Instagram
+            </a>
+          </motion.div>
+          <motion.div
+            className="flex items-center space-x-2"
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
           >
-            Discord
-          </a>
-          <a
-            href={data.linktree}
-            className="text-lg underline hover:text-gray-500"
+            <FaDiscord
+              className="text-[#0d0a1f]"
+              style={{ verticalAlign: "middle" }}
+            />
+            <a
+              href={data.discord}
+              className="flex items-center space-x-2 rounded bg-[#0d0a1f] px-4 py-2 font-bold text-[#a562db]"
+              style={{ perspective: "500px" }}
+            >
+              Discord
+            </a>
+          </motion.div>
+          <motion.div
+            className="flex items-center space-x-2"
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
           >
-            LinkTree
-          </a>
+            <SiLinktree
+              className="text-[#0d0a1f]"
+              style={{ verticalAlign: "middle" }}
+            />
+            <a
+              href={data.linktree}
+              className="flex items-center space-x-2 rounded bg-[#0d0a1f] px-4 py-2 font-bold text-[#a562db]"
+              style={{ perspective: "500px" }}
+            >
+              Linktree
+            </a>
+          </motion.div>
         </div>
       </div>
     </div>
