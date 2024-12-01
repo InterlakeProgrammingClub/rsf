@@ -55,7 +55,7 @@ const Home = () => {
             className="mb-4 inline-flex pb-8 text-center sm:text-left"
           >
             <a
-              href=""
+              href="https://linktr.ee/interlakeRSF"
               className="flex items-center space-x-1 rounded bg-[#a562db] px-4 py-2 text-xl font-bold text-[#0d0a1f]"
             >
               <span className="flex items-center justify-between">
