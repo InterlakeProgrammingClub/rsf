@@ -25,7 +25,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="text-center ">
+    <div className="text-center bg-[#a562db] pb-10">
       <motion.div
         className="relative h-96 bg-cover bg-center"
         style={{ backgroundImage: `url(${bgimg})` }}
@@ -66,7 +66,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </motion.div>
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 bg-[#a562db]">
         <h2 className="mb-4 text-2xl font-bold underline underline-offset-2">
           Contact Us:
         </h2>

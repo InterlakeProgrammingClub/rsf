@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="text-center" style={{ fontFamily: "Poppins" }}>
       <motion.div
-        className="relative min-h-screen bg-cover bg-center"
+        className="relative min-h-[1100px] sm:h-screen bg-cover bg-center"
         style={{ backgroundImage: `url(${img3})` }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -21,7 +21,7 @@ const Home = () => {
           <img
             src={logo}
             alt="Logo"
-            className="mr-2 sm:mt-20 mt-8 h-40 w-40 rounded-md sm:hidden"
+            className="mr-2 sm:mt-20 mt-28 h-40 w-40 rounded-md sm:hidden"
           />
           <h1
             className="mr-2 px-3 pb-2 pt-4 text-center text-5xl font-bold sm:text-left"
