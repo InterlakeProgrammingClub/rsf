@@ -8,7 +8,7 @@ import bgimg from "../assets/img4.png";
 import officer1 from "../assets/officer1.jpg";
 import officer2 from "../assets/officer2.jpg";
 import officer3 from "../assets/officer3.jpg";
-import officer4 from "../assets/officer4.jpg";
+import officer4 from "../assets/officer4.png";
 import officer5 from "../assets/officer5.jpg";
 import officer6 from "../assets/officer6.jpg";
 import img1 from "../assets/img1.png";
