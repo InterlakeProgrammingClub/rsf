@@ -1,6 +1,17 @@
 # Club Template
 
-Use this template to build club websites
+Website Built for RSF by Aarnav Bhat & Michael Chang
+
+
+
+Other Info:
+_______________
+
+
+
+
+
+
 
 Research & Science Fair Club
 
